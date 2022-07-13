@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="images/pixlr-bg-result-_21_.ico" type="image/x-icon" />
+
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <link rel="stylesheet" href="https://venusfactor.org/resources/css/controls/video/yt.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+
+    <title>Protocolo Cero Vientre</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header-stripes-bg">
+            <div class="container">
+                <div style="width: 100%;" class="section section1 abovethefold">
+                    <!-- HEADER -->
+                    <div class="row" id="header">
+                        <h1 class="headline">Este secreto hizo que en pocas semanas Daniela Rodrigues <span>disolviera 23kls.</span> A los 44 años...</h1>
+                        <div class="span-header"><span>¡De tus nalgas, tus caderas, tus brazos y tu cara! VER &#10549;</span></div>
+                    </div><!--header-->
+                    <!-- HEADER END -->
+                    <div id="video-box">
+                        <div class="wrapper" style="">
+                            <div class="video-absolute">
+                                <div class="wistia-video-container">
+                                    <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                                        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                                            <div style="padding:56.25% 0 0 0;position:relative;">
+                                                <div style="height:100%;left:0;position:absolute;top:0;width:100%;" class="video-wrap-wrap">
+                                                    <iframe id="video"
+                                                            style="height:100%;width:100%"
+                                                            src="https://www.youtube.com/embed/6UWiqGLJvqA?rel=0&controls=0&showinfo=0&enablejsapi=1&playsinline=1&mute=0"
+                                                            frameborder="0" allowfullscreen allow="autoplay; ">
+                                                    </iframe>
+                                        
+                                                    <div id="play-button-video"
+                                                        class="yt-thumbnail"
+                                                        style="background: url(https://venusfactor.org/resources/img/thumb-white-yt.png); background-size: cover;">
+                                                    </div><!--play-button-video-->
+                                                    <div class="youtube-overlay"></div>
+                                                </div><!--video-wrap-wrap-->
+                                            </div>
+                                        </div><!--wistia_responsive_wrapper-->
+                                    </div><!--wistia_responsive_padding-->
+                                </div><!--wistia-video-container-->
+                            </div><!--video-absolute-->
+                        </div><!--wrapper-->
+                    </div><!--video-box-->
+                </div><!--section-->
+            </div><!--container-->
+        </div><!--header-stripes-bg-->
+    </div><!--main-->
+    
+    <div class="arrow-down"></div>
+
+    <div class="button-container delay">
+        <a href="https://pay.hotmart.com/G72719361W" target="_blank" rel="nofollow" class="button">
+            ¡QUIERO ACCEDER! (PULSE AQUÍ)
+            </a>
+            <img src="gPtyhq3219194.png" alt="Compra" width="360" height="95" loading="lazy">
+    </div>
+
+    <div class="semRelacaoFB">
+        <p><b>Este sitio no está afiliado a Facebook ni a ninguna entidad de Facebook. Una vez que abandonas Facebook, la responsabilidad no es de ellos sino de nuestro sitio. Hacemos todo lo posible por indicar y mostrar claramente todas las pruebas de los productos y utilizar resultados reales.</p>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//www.youtube.com/player_api"></script>
+
+    <script>
+        var player;
+        var firstTimePlaying = true;
+        var isVideoLoaded = false;
+        var playerState;
+        var videoStarted = false;
+        var playButton = document.getElementById("play-button-video");
+
+        
+    
+        (function () {
+            $('#video').load(function () {
+
+                player = new YT.Player('video', {
+                    width: '100%',
+                    videoId: '6UWiqGLJvqA',
+    
+                    events: {
+                        'onReady': function (event) {
+                            $(document).trigger('player.video.loaded');
+                            isVideoLoaded = true;
+    
+                                console.log('automute');
+                                player.mute();
+                        },
+                        'onStateChange': function (event) {
+                            playerState = event;
+                            if (event.data === YT.PlayerState.PLAYING) {
+                                $(document).trigger('player.video.started');
+                                $('.youtube-overlay').attr('style', 'display:block!important');
+    
+                                if($('body, html').width() > 1000 && firstTimePlaying === false) {
+                                    $('.new-video-container').addClass('new-video-fullscreen');
+                                }
+    
+                                // Fix iOS YT player muted
+                            }
+                            if (event.data === YT.PlayerState.PAUSED) {
+                                $(document).trigger('player.video.paused');
+                                $('.video-pause').show();
+    
+                                $('.new-video-container').removeClass('new-video-fullscreen');
+    
+                                $('.new-video-container .video-border').height('auto');
+                                $('.new-video-container .video-border, .new-video-container, .new-video-container .video, .new-video-container iframe').attr('style', '');
+    
+                                console.log('paused');
+                            }
+                        }
+                    }
+                });
+            
+                $(document).on('player.video.loaded', function () {
+                    var playButton = document.getElementById("play-button-video");
+                    var videoStarted = false;
+    
+                    
+                        videoStarted = true;
+                    // play button
+                    if (playButton) {
+                        playButton.addEventListener("click", function () {
+                            if (!videoStarted) {
+                                $("#play-button-video").css('background', 'none');
+                                videoStarted = true;
+                            }
+    
+                            if (player.getPlayerState() === 1 && firstTimePlaying === false) {
+                                player.pauseVideo();
+                            } else {
+                                player.unMute();
+                                player.playVideo();
+                            }
+    
+                            firstTimePlaying = false;
+                        });
+                    }
+                    // every second fire the playing event
+                    setInterval(function () {
+                        // broadcast the event
+                        $(document).trigger('player.video.playing', [{
+                            playbackTime: player.getCurrentTime(),
+                            videoLength: player.getDuration()
+                        }]);
+                    }, 1000);
+                });
+                
+
+            const DELAY_TIME_IN_SECONDS = 1360;
+            const DELAY_ELEMENTS_CLASS = 'delay';
+            const YOUTUBE_VIDEO_ID = "HGSiaeBP_ow";
+
+            function showElements(className, value) {
+            for (const element of document.getElementsByClassName(className)) {
+                element.style.display = value;
+            }
+            }
+
+            const iframeWindow = player.getIframe().contentWindow;
+
+            window.addEventListener("message", function(event) {
+
+                if (event.source === iframeWindow) {
+                const data = JSON.parse(event.data);
+
+                if (
+                    data.event === "infoDelivery" &&
+                    data.info &&
+                    data.info.currentTime
+                ) {
+                    const time = Math.floor(data.info.currentTime);
+                    
+
+                    if (time >= DELAY_TIME_IN_SECONDS) {
+                    showElements(DELAY_ELEMENTS_CLASS, 'block');
+                    }
+                }
+                }
+            });
+            })
+            
+        })();
+        </script>
+
+
+<script>
+    var videoDivHeight;
+        var videoPaused = false;
+        var btnSoundClick = false;
+
+        $(document).ready(function() {
+
+            var video = $('.wistia-video-container video');
+            video.prop('muted', true);
+            $(document).trigger('player.video.play');
+
+            setTimeout(function() {
+                $('#pay-first').slideDown(500);
+                $('#cb-contact-links').slideDown(500);
+                $('.guarantee-stripe').css('display', 'flex');
+                $('.footer-stripes-bg').removeClass('footer-stripes-bg-hidden');
+                ga('send', 'event', 'Landing_page', 'buy_area_pop', 'variant2');
+            }, 1596000);
+
+            countWrapperHeight();
+
+            $(window).resize(function() {
+                countWrapperHeight();
+            });
+
+            $('.wistia-video-container').click(function(){
+                var that = $(this);
+                // console.log($(this).parents("#video-box .wrapper").height());
+                fullScreenVideo(that);
+            });
+
+            $('.btn-sound-on').click(function() {
+                btnSoundClick = true;
+                $('body').addClass('full-body-video');
+
+                countWrapperHeight();
+
+                $('.w-vulcan-v2-button, .btn-sound-on').hide();
+                $('div').find('[data-handle="click-for-sound-backdrop"]').hide();
+                $('.unmute-text, .video-paused-btn, .continue-text, .btn-sound-on').hide();
+            });
+
+            $('.unmute-text, .video-paused-btn, .continue-text, .yt-thumbnail').on('click', function () {
+
+                var video = $('.wistia-video-container video');
+                video.prop('muted', false);
+                // video.get(0).play();
+
+                if (typeof player !== 'undefined') {
+                    player.unMute();
+                    player.playVideo();
+                }
+
+                $('body').addClass('full-body-video');
+                countWrapperHeight();
+
+                $('.w-vulcan-v2-button, .btn-sound-on').hide();
+                $('div').find('[data-handle="click-for-sound-backdrop"]').hide();
+
+                $('.unmute-text, .video-paused-btn, .continue-text').hide();
+            });
+
+            // Fix for mobile video height
+            if($('body').hasClass('mobile')) {
+                var videoBoxHei = $('#video-box').height();
+                // $('#video-box .wrapper').attr('style', 'height:'+videoBoxHei+'px!important');
+                // $('#video-box .wrapper div').attr('style', 'height:'+(videoBoxHei-20)+'px!important');
+            }
+
+            /*
+            $(document).on("player.video.loaded", function () {
+                videoDivHeight = $('.wistia-video-container').height();
+                player.seekTo(0, true);
+            });
+            */
+            $(document).on("player.video.started", function () {
+                console.log('hide bg, video started');
+                $('#play-button-video').css('background', 'none');
+                $('.continue-text').hide();
+                videoPaused = false;
+            });
+
+            $(document).on("player.video.paused", function () {
+                videoPaused = true;
+                $('.video-paused-btn').show();
+
+                var videoOffsetBottom = $('.video-absolute').offset().top + $('.video-absolute').height() - 20;
+
+                if($(window).scrollTop() < videoOffsetBottom)
+                    $('.continue-text').show();
+
+
+                $('body').removeClass('full-body-video');
+                countWrapperHeight();
+            });
+
+            function fullScreenVideo(that) {
+                var video = that.find('video').get(0);
+                $('.unmute-text').hide();
+
+                if(btnSoundClick === true) {
+                    $('body').removeClass('full-body-video');
+                    player.pauseVideo();
+                    btnSoundClick = false;
+                }
+
+                if(videoPaused === true) {
+                    // $('body').removeClass('full-body-video');
+                    countWrapperHeight();
+                    $('.continue-text').show();
+                } else {
+                    $('body').addClass('full-body-video');
+                    countWrapperHeight();
+                    $('.video-paused-btn, .btn-sound-on, .continue-text').hide();
+
+                    // Fix iOS address bar
+                    if($('body').hasClass('mobile')) {
+                        $('html, body').animate({
+                            scrollTop: -100
+                        }, 100);
+                    } else {
+                        window.scroll(0, 0);
+                    }
+                }
+            }
+
+            function countWrapperHeight() {
+                if($('body').hasClass('full-body-video')) {
+                    var videoHei = $('.wistia-video-container').height() - $('#video-box .wrapper').offset().top;
+                    // Push the content below the video
+                    $('#video-box .wrapper').height(videoHei);
+                } else {
+                    $('#video-box .wrapper').height('auto');
+                }
+            }
+
+            function showAllContent() {
+                $('#pay-first').slideDown(500);
+                $('#cb-contact-links').slideDown(500);
+            }
+
+        });
+</script>
+
+</body>
+</html>
