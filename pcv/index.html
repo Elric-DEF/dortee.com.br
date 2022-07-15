@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="images/pixlr-bg-result-_21_.ico" type="image/x-icon" />
+
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <link rel="stylesheet" href="https://venusfactor.org/resources/css/controls/video/yt.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="https://scripts.converteai.net/1996c39a-f356-4a81-84e4-62abba6e0fea/players/62d1f1696008c2000ba713e4/player.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+    <link rel="preload" href="https://images.converteai.net/1996c39a-f356-4a81-84e4-62abba6e0fea/players/62d1f1696008c2000ba713e4/thumbnail.jpg" as="image">
+    <link rel="preload" href="https://cdn.converteai.net/1996c39a-f356-4a81-84e4-62abba6e0fea/62d1f08b6008c2000ba713e2/playlist.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+    <title>Protocolo Cero Vientre</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header-stripes-bg">
+            <div class="container">
+                <div style="width: 100%;" class="section section1 abovethefold">
+                    <!-- HEADER -->
+                    <div class="row" id="header">
+                        <h1 class="headline">Este secreto hizo que en pocas semanas Daniela Rodrigues <span>disolviera 23kls.</span> A los 44 años...</h1>
+                        <div class="span-header"><p>¡De tus nalgas, tus caderas, tus brazos y tu cara! VER &#10549;</p></div>
+                    </div><!--header-->
+                    <!-- HEADER END -->
+                    <div id="video-box">
+                        <div class="wrapper" style="">
+                            <div class="video-absolute">
+                                <div id="vid_62d1f1696008c2000ba713e4" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_62d1f1696008c2000ba713e4" src="https://images.converteai.net/1996c39a-f356-4a81-84e4-62abba6e0fea/players/62d1f1696008c2000ba713e4/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_62d1f1696008c2000ba713e4" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_62d1f1696008c2000ba713e4">var s=document.createElement("script");s.src="https://scripts.converteai.net/1996c39a-f356-4a81-84e4-62abba6e0fea/players/62d1f1696008c2000ba713e4/player.js",s.async=!0,document.head.appendChild(s);</script>
+                        </div><!--wrapper-->
+                    </div><!--video-box-->
+                </div><!--section-->
+            </div><!--container-->
+        </div><!--header-stripes-bg-->
+    </div><!--main-->
+    
+    <div class="arrow-down delay"></div>
+
+    <div class="button-container delay">
+        <a href="https://pay.hotmart.com/G72719361W" target="_blank" rel="nofollow" class="button">
+            ¡QUIERO ACCEDER! (PULSE AQUÍ)
+            </a>
+            <img src="gPtyhq3219194.png" alt="Compra" width="360" height="95" loading="lazy">
+    </div>
+
+    <div class="semRelacaoFB">
+        <p><b>Este sitio no está afiliado a Facebook ni a ninguna entidad de Facebook. Una vez que abandonas Facebook, la responsabilidad no es de ellos sino de nuestro sitio. Hacemos todo lo posible por indicar y mostrar claramente todas las pruebas de los productos y utilizar resultados reales.</p>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//www.youtube.com/player_api"></script>
+
+    <style>.delay {display: none;}</style>
+    <script>
+    const DELAY_TIME_IN_SECONDS = 1360;
+    const DELAY_ELEMENTS_CLASS = 'delay';
+
+    let player;
+
+    function showElements(className, value) {
+        for (const element of document.getElementsByClassName(className)) {
+            element.style.display = value;
+        }
+    }
+
+    function showElementsAfterDelay() {
+    const time = Math.floor(player.video.currentTime);
+    if (time >= DELAY_TIME_IN_SECONDS && player.paused == false) {
+        showElements(DELAY_ELEMENTS_CLASS, 'block');
+    }
+    }
+
+    window.onload = () => {
+        showElements(DELAY_ELEMENTS_CLASS, 'none');
+        const addFunctionShowElementsAfterDelay = setInterval(() => {
+        if (window.smartplayer.instances[0].mounted) {
+            player = window.smartplayer.instances[0];
+            player.events.events.timeupdate.push(showElementsAfterDelay);
+            clearInterval(addFunctionShowElementsAfterDelay);
+        }
+        }, 100)
+    }
+    </script>
+
+</body>
+</html>
