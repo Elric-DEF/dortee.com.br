@@ -326,6 +326,11 @@ a.button{
         font-size: 4.30vw;
         margin: 30px 50px 20px 50px;
     }
+    
+    .header-stripes-bg{
+        display: inline-block;
+        height: 100vh;
+    }
 
     .headline{
         font-size: 28px;
