@@ -20,6 +20,8 @@
     <link rel="dns-prefetch" href="https://b-vz-0b28c8f7-70b.tv.pandavideo.com.br">
     <link rel="dns-prefetch" href="https://player-vz-0b28c8f7-70b.tv.pandavideo.com.br">
     <link rel="dns-prefetch" href="https://vz-0b28c8f7-70b.b-cdn.net">
+    
+    <script src="https://player.pandavideo.com.br/api.v2.js"></script>
 
     <title>Protocolo Cero Vientre</title>
     
@@ -90,33 +92,25 @@
     var main = document.getElementById("pops")
     const DELAY_TIME_IN_SECONDS = 10;
     const DELAY_ELEMENTS_CLASS = 'delay';
-
-    let player;
-
+    
     function showElements(className, value) {
         for (const element of document.getElementsByClassName(className)) {
             element.style.display = value;
         }
     }
-
-    function showElementsAfterDelay() {
-    const time = Math.floor(player.video.currentTime);
-    if (time >= DELAY_TIME_IN_SECONDS && player.paused == false) {
-        showElements(DELAY_ELEMENTS_CLASS, 'block');
-        main.style.display = 'block'
-        main.style.height = 'auto'
-    }
-    }
-
+    
     window.onload = () => {
         showElements(DELAY_ELEMENTS_CLASS, 'none');
-        const addFunctionShowElementsAfterDelay = setInterval(() => {
-        if (window.smartplayer.instances[0].mounted) {
-            player = window.smartplayer.instances[0];
-            player.events.events.timeupdate.push(showElementsAfterDelay);
-            clearInterval(addFunctionShowElementsAfterDelay);
-        }
-        }, 100)
+        window.addEventListener("message", function(event) {
+          const data = event.data;
+          if (data.message == 'panda_timeupdate') {
+            if (data.currentTime >= DELAY_TIME_IN_SECONDS) {
+              showElements(DELAY_ELEMENTS_CLASS, 'block');
+                main.style.display = 'block'
+                main.style.height = 'auto'
+            }
+          }
+        });
     }
     </script>
 
