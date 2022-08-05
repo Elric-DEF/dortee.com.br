@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.headline {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+
+
+#header {
+    padding: 40px 170px 60px 170px;
+    background-color: #130004;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#header span:nth-child(1){
+    color: #FEFE00;
+}
+
+#header .span-header{
+    position: relative;
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+}
+
+#header .span-header p{
+    display: inline;
+    font-size: 31px;
+    font-weight: 600;
+    background-color: #ED0203;
+    color: #fff;
+}
+
+#header .span-header span:nth-child(2){
+    
+}
+
+.header-stripes-bg{
+    background: rgb(30,8,13);
+background: linear-gradient(180deg, rgba(30,8,13,1) 0%, rgba(62,0,15,1) 100%);
+}
+
+.delay{
+    display: none;
+}
+
+.row {
+    width: 100%;
+    clear: both;
+    display: table;
+  }
+
+.btn-sound-on {
+    left: -90px!important;
+}
+
+.btn-sound-on-right {
+    right: -90px!important;
+    left: auto!important;
+}
+
+/*.yt-thumbnail */
+
+/*.btn-sound-on */
+
+.wistia_responsive_wrapper > div {
+    padding: 0 !important;
+    position: static !important;
+}
+
+@media screen and (min-width: 650px) {
+    .wistia_responsive_wrapper > div {
+        padding: 56.25% 0 0 0;
+        position: relative;
+    }
+}
+
+#play-button-video {
+    cursor: pointer!important;
+}
+
+.mobile .wistia_responsive_wrapper #play-button-video {
+    display: block!important;
+}
+
+.video-absolute {
+    height: 100%!important;
+    position: relative;
+}
+
+#video_wrapper {
+    margin: auto;
+}
+
+
+.bna:after {
+    content: "*Results seen are not typical. As with any weight loss program individual results can vary greatly.";
+    font-style: italic;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 2%;
+    max-width: 1280px;
+}
+
+#video-box .wrapper{
+    -webkit-box-shadow: 0px 0px 17px 9px #600319; 
+    box-shadow: 0px 0px 17px 9px #600319;
+}
+#video-box .wrapper {
+    
+}
+#video-box .wrapper .btn-sound-on {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -60px;
+    background: #1D2B59;
+    color: white;
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    border-radius: 6px 0 0 6px;
+    width: 90px;
+    padding: 20px 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#video-box .wrapper .btn-sound-on span {
+    margin-top: 20px;
+    line-height: 18px;
+    display: block;
+    font-size: 15px;
+}
+#video-box .wrapper .btn-sound-on-right {
+    left: auto;
+    right: -60px;
+    border-radius: 0 6px 6px 0;
+}
+
+.full-body-video .video-absolute {
+    position: static;
+}
+.full-body-video .wistia-video-container {
+    box-shadow: none!important;
+    border: none!important;
+    position: absolute!important;
+    left: 0!important;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+    border-bottom: 30px;
+    max-height: 100vh!important;
+    max-width: 100vw!important;
+    width: 100%!important;
+    height: 100%!important;
+    background-color: black!important;
+    border-radius: 0!important;
+}
+.full-body-video .wistia-video-container video {
+    height: 100%!important;
+    max-height: 100%;
+    max-width: 100%;
+}
+.full-body-video .wistia_responsive_padding {
+    height: 100%!important;
+    padding: 0!important;
+}
+
+.wistia-video-container {
+    box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.21);
+}
+
+.full-body-video .wistia_responsive_padding {
+    height: 100%!important;
+}
+
+
+
+/*Botão*/
+
+a.button{
+    background: rgb(223,7,56);
+    background: linear-gradient(180deg, rgba(223,7,56,1) 0%, rgba(64,0,16,1) 100%);
+    color: #ffffff;
+    border-radius: 75px;
+    padding: 16px 32px 16px 32px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-align: center;
+    margin: 2vh auto 2vh auto;
+    font-size: 1.65vw;
+    box-sizing: border-box;
+    max-width: 100%;
+    text-decoration: none;
+}
+
+.button {
+    animation: pulse 1.0s infinite;
+    -webkit-animation: pulse 1.0s infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    25% {
+      -webkit-transform: scale(1.1);
+    }
+    50% {
+      -webkit-transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+    }
+  }
+
+@keyframes pulse { 
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.button-container img {
+    max-width: 360px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    position: relative;
+    top: -15px;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid rgb(30,8,13);
+    margin: 0 auto;
+  }
+
+.semRelacaoFB{
+    padding: 40px 0 20px 0;
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+    color: #ffffff;
+    text-align: center;
+}
+
+.semRelacaoFB p{
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (max-width: 900px) {
+    a.button {
+        font-size: 4.30vw;
+        margin: 30px 50px 20px 50px;
+    }
+    
+    .header-stripes-bg{
+        display: inline-block;
+        height: 100vh;
+    }
+
+    .headline{
+        font-size: 28px;
+    }
+
+    #header .span-header{
+        margin: 40px 10px 0 10px;
+    }
+
+    #header .span-header p{
+        font-size: 18px;
+    }
+    
+    #header {
+        padding: 40px 0;
+    }
+
+    #video-box .wrapper {
+        padding: 0!important;
+    }
+
+    .video-absolute {
+        height: 100%!important;
+    }
+
+    .semRelacaoFB p{
+        margin: 0 30px;
+        font-size: 14px;
+    }
+
+    .button-container img {
+        max-width: 240px;
+    }
+
+}
